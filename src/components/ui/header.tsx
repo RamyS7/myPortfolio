@@ -1,25 +1,31 @@
 import Link from 'next/link';
 import React from 'react';
-import NavBar from './navBar';
-import { Button } from './button';
+import NavBar from './NavBar';
 import MobileNav from './MobileNav';
+import ThemeToggle from '../layout/ThemeToggle';
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 bg-primary text-white">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full py-4 xl:py-8 border-b border-[var(--color-border)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)] transition-colors duration-300">
       <div className='container mx-auto flex justify-between items-center '>
         {/*Logo */}
-        <Link href="/">
+        <Link href="#home">
           <h1 className='text-4xl  font-semibold'>
             Ramy <span className='text-accent'>.</span>
           </h1>
         </Link>
-        <div className="hidden xl:flex gap-8 items-center">
-          <NavBar />
-          <Link href="/contact" className='ml-8'>
-            <Button variant="outline" size="lg">Contact</Button>
-          </Link>
+        {/* Navigation & Controls */}
+        <div className="flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-8">
+            <NavBar />
+          </div>
+
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <div className="xl:hidden">
+              <MobileNav />
+            </div>
+          </div>
         </div>
-        <div className='xl:hidden'> <MobileNav /></div>
       </div>
     </header>
   );

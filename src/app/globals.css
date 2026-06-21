@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 960px;
+    --breakpoint-xl: 1200px;
+}
+
+@theme {
+    --font-geist-sans: var(--font-geist-sans);
+    --font-geist-mono: var(--font-geist-mono);
+    --color-accent: #9A7E64;
+    --color-accent-hover: #705B48;
+
+    /* Light mode (Linen & Soft Bronze) */
+    --color-primary: #FAF8F6;
+    --color-primary-foreground: #261F1C;
+    --color-surface: #F0EBE7;
+    --color-border: #DECFC7;
+    --color-muted: #7E6F67;
+    --color-overlay: #FAF8F6;
+}
+
+/* Dark mode overrides (Luxury Chocolate & Champagne Gold) */
+.dark {
+    --color-primary: #151211;
+    --color-primary-foreground: #FDFBFA;
+    --color-surface: #1E1A18;
+    --color-border: #352B27;
+    --color-muted: #A89A93;
+    --color-overlay: #151211;
+    --color-accent: #E5C49E;
+    --color-accent-hover: #ECCEB0;
+}
+
+/* Base styles */
+html, body {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Premium Card Transitions */
+.card-transition {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-transition:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px var(--shadow-color);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --shadow-color: rgba(154, 126, 100, 0.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.dark {
+    --shadow-color: rgba(0, 0, 0, 0.5);
 }
