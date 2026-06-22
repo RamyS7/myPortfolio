@@ -1,4 +1,3 @@
-"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -52,14 +51,7 @@ export default function Hero() {
                         delay: 0.2,
                     }}
 
-                    className="
-            text-4xl
-            md:text-6xl
-            font-bold
-            tracking-tight
-            text-[var(--color-primary-foreground)]
-            mb-4
-          "
+                    className="text-4xl md:text-6xl font-bold tracking-tight text-[var(--color-primary-foreground)] mb-4"
                 >
 
                     Hello! I'm
@@ -90,13 +82,7 @@ export default function Hero() {
                         delay: 0.4,
                     }}
 
-                    className="
-            text-xl
-            md:text-3xl
-            font-semibold
-            text-[var(--color-muted)]
-            mb-6
-          "
+                    className="text-xl md:text-3xl font-semibold text-[var(--color-muted)] mb-6"
 
                 >
 
@@ -143,14 +129,7 @@ export default function Hero() {
                         delay: 0.6,
                     }}
 
-                    className="
-            text-base
-            md:text-lg
-            leading-8
-            text-[var(--color-primary-foreground)]/85
-            max-w-3xl
-            mx-auto
-          "
+                    className="text-base md:text-lg leading-8 text-[var(--color-primary-foreground)]/85 max-w-3xl mx-auto"
 
                 >
 
@@ -186,12 +165,7 @@ export default function Hero() {
                         delay: 0.8,
                     }}
 
-                    className="
-            mt-8
-            flex
-            justify-center
-            gap-4
-          "
+                    className="mt-8 flex justify-center gap-4"
 
                 >
 
@@ -204,13 +178,7 @@ export default function Hero() {
 
                             size="lg"
 
-                            className="
-                px-8
-                py-3
-                transition-all
-                duration-300
-                hover:scale-105
-              "
+                            className="px-8 py-3 transition-all duration-300 hover:scale-105"
 
                         >
                             Projects
@@ -228,13 +196,7 @@ export default function Hero() {
 
                             size="lg"
 
-                            className="
-                px-8
-                py-3
-                transition-all
-                duration-300
-                hover:scale-105
-              "
+                            className="px-8 py-3 transition-all duration-300 hover:scale-105"
 
                         >
                             Contact

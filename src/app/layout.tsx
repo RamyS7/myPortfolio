@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/header";
 import ThemeProvider from "@/components/providers/ThemeProvider";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} leading-loose`}>
-      <body>
+    <html lang="en" suppressHydrationWarning={true} className={geistSans.variable}>
+      <body className="leading-loose">
         <ThemeProvider>
           <Header />
           {children}

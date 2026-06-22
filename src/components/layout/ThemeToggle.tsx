@@ -26,7 +26,11 @@ export default function ThemeToggle() {
     return (
         <button
             onClick={changeTheme}
-            title={`Current theme: ${theme}`}
+            title={
+                mounted
+                    ? `Current theme: ${theme}`
+                    : "Change theme"
+            }
             className="
         flex
         h-10
@@ -47,21 +51,28 @@ export default function ThemeToggle() {
         hover:shadow-md
       "
         >
-            {theme === "light" && (
+            {!mounted && (
+                <Monitor size={18} />
+            )}
+
+
+            {mounted && theme === "light" && (
                 <Sun
                     size={18}
                     className="text-yellow-500 fill-yellow-400 transition-transform duration-300"
                 />
             )}
 
-            {theme === "dark" && (
+
+            {mounted && theme === "dark" && (
                 <Moon
                     size={18}
                     className="text-accent fill-accent/80 transition-transform duration-300"
                 />
             )}
 
-            {theme === "system" && (
+
+            {mounted && theme === "system" && (
                 <Monitor
                     size={18}
                     className="text-[var(--color-muted)] transition-transform duration-300"

@@ -1,4 +1,4 @@
-"use client";
+
 
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
@@ -31,25 +31,26 @@ export default function Contact() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-          <a href="https://wa.me/201117147125?text=Hello" target="_blank" rel="noreferrer">
-            <button
-              className="
-                px-6
-                py-3
-                rounded-[6px]
-                bg-accent
-                text-black
-                font-semibold
-                hover:scale-105
-                transition-all
-                duration-300
-                shadow-lg
-                hover:shadow-accent/20
-                text-sm
-              "
-            >
-              Say Hello 👋
-            </button>
+          <a
+            href="https://wa.me/201117147125?text=Hello"
+            target="_blank"
+            rel="noreferrer"
+            className="
+              px-6
+              py-3
+              rounded-[6px]
+              bg-accent
+              text-black
+              font-semibold
+              hover:scale-105
+              transition-all
+              duration-300
+              shadow-lg
+              hover:shadow-accent/20
+              text-sm
+            "
+          >
+            Say Hello 👋
           </a>
 
           {/* Social links */}
