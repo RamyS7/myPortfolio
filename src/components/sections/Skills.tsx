@@ -110,12 +110,7 @@ export default function Skills() {
                 What Skills I Have
             </h2>
 
-            <div className="
-        grid
-        grid-cols-2
-        md:grid-cols-3
-        gap-6
-      ">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
 
                 <AnimatePresence>
 
@@ -144,33 +139,10 @@ export default function Skills() {
                                 duration: 0.6,
                             }}
 
-                            className="
-                rounded-[6px]
-                border
-                border-[var(--color-border)]
-                bg-[var(--color-surface)]
-                p-6
-                hover:border-accent
-                card-transition
-                group
-                flex
-                flex-col
-                items-center
-                text-center
-              "
-
+                            className="rounded-[6px] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover:border-accent card-transition group flex flex-col items-center text-center"
                         >
 
-                            <div className="
-                text-5xl
-                text-accent
-                mb-4
-                group-hover:scale-110
-                transition
-                flex
-                justify-center
-                w-full
-              ">
+                            <div className="text-5xl text-accent mb-4 group-hover:scale-110 transition flex justify-center w-full">
 
                                 {skill.icon}
 
@@ -178,10 +150,7 @@ export default function Skills() {
 
 
 
-                            <h3 className="
-                text-xl
-                font-semibold
-              ">
+                            <h3 className="text-xl font-semibold">
 
                                 {skill.name}
 
@@ -189,10 +158,7 @@ export default function Skills() {
 
 
 
-                            <p className="
-                text-[var(--color-muted)]
-                mt-2
-              ">
+                            <p className="text-[var(--color-muted)] mt-2">
 
                                 {skill.category}
 
@@ -216,16 +182,7 @@ export default function Skills() {
 
                     onClick={() => setShowMore(!showMore)}
 
-                    className="
-          px-6
-          py-3
-          rounded-[6px]
-          bg-accent
-          text-black
-          font-semibold
-          hover:scale-105
-          transition
-        "
+                    className="px-6 py-3 rounded-[6px] bg-accent text-black font-semibold hover:scale-105 transition"
 
                 >
 

@@ -35,25 +35,10 @@ export default function Contact() {
             href="https://wa.me/201117147125?text=Hello"
             target="_blank"
             rel="noreferrer"
-            className="
-              px-6
-              py-3
-              rounded-[6px]
-              bg-accent
-              text-black
-              font-semibold
-              hover:scale-105
-              transition-all
-              duration-300
-              shadow-lg
-              hover:shadow-accent/20
-              text-sm
-            "
+            className="px-6 py-3 rounded-[6px] bg-accent text-black font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-accent/20 text-sm"
           >
             Say Hello 👋
           </a>
-
-          {/* Social links */}
           <div className="flex gap-4 text-2xl">
             <a
               href="https://www.linkedin.com/in/ramysafwat/"

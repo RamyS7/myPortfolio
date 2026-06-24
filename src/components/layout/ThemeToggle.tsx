@@ -31,30 +31,9 @@ export default function ThemeToggle() {
                     ? `Current theme: ${theme}`
                     : "Change theme"
             }
-            className="
-        flex
-        h-10
-        w-10
-        items-center
-        justify-center
-        rounded-[6px]
-        border
-        border-[var(--color-border)]
-        bg-[var(--color-surface)]
-        text-[var(--color-primary-foreground)]
-        shadow-sm
-        transition-all
-        duration-300
-        hover:scale-105
-        hover:border-accent
-        hover:shadow-accent/20
-        hover:shadow-md
-      "
+            className="flex h-10 w-10 items-center justify-center rounded-[6px] border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-primary-foreground)] shadow-sm transition-all duration-300 hover:scale-105 hover:border-accent hover:shadow-accent/20 hover:shadow-md"
         >
-            {!mounted && (
-                <Monitor size={18} />
-            )}
-
+            {!mounted && <Monitor size={18} />}
 
             {mounted && theme === "light" && (
                 <Sun
